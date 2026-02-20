@@ -50,7 +50,7 @@ class CardinalityTest extends TestCase
     protected function setUp(): void
     {
         Configuration::loadFromArray([], '[ARRAY]', 'simplesaml');
-        $this->httpUtils = $this->createStub(Utils\HTTP::class);
+        $this->httpUtils = $this->getMockBuilder(Utils\HTTP::class)->getMock();
     }
 
 
@@ -125,7 +125,6 @@ class CardinalityTest extends TestCase
      * @throws \SimpleSAML\Error\Exception
      * @throws \Throwable
      */
-    #[DoesNotPerformAssertions]
     public function testMaxOutOfBounds(): void
     {
         $config = [
@@ -150,7 +149,6 @@ class CardinalityTest extends TestCase
      * @throws \SimpleSAML\Error\Exception
      * @throws \Throwable
      */
-    #[DoesNotPerformAssertions]
     public function testMinOutOfBounds(): void
     {
         $config = [
@@ -175,7 +173,6 @@ class CardinalityTest extends TestCase
      * @throws \SimpleSAML\Error\Exception
      * @throws \Throwable
      */
-    #[DoesNotPerformAssertions]
     public function testMissingAttribute(): void
     {
         $config = [

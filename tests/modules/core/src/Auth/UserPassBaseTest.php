@@ -68,6 +68,7 @@ class UserPassBaseTest extends TestCase
 
         $stub = $this->getMockBuilder(UserPassBase::class)
             ->disableOriginalConstructor()
+            ->onlyMethods(['login'])
             ->getMock();
 
         $request = Request::createFromGlobals();
@@ -94,6 +95,7 @@ class UserPassBaseTest extends TestCase
 
         $stub = $this->getMockBuilder(UserPassBase::class)
             ->disableOriginalConstructor()
+            ->onlyMethods(['login'])
             ->getMock();
 
         $request = Request::createFromGlobals();
