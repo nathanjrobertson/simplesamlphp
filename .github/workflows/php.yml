@@ -195,7 +195,7 @@ jobs:
         run: composer validate
 
       - name: Install Composer dependencies
-        run: composer install --no-progress --prefer-dist --optimize-autoloader \
+        run: composer install --no-progress --prefer-dist --optimize-autoloader\
           --ignore-platform-req=maglnet/composer-require-checker
 
       - name: PHP Code Sniffer
