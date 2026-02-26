@@ -6,8 +6,8 @@ namespace SimpleSAML\Module\core\Auth\Process;
 
 use Exception;
 use SimpleSAML\Assert\Assert;
-use SimpleSAML\Logger;
 use SimpleSAML\Auth;
+use SimpleSAML\Logger;
 
 /**
  * Filter to add attributes.
@@ -46,6 +46,7 @@ class AttributeDump extends Auth\ProcessingFilter
      */
     private string $logPrefix = 'AttributeDump';
 
+
     /**
      * Initialize this filter.
      *
@@ -80,7 +81,7 @@ class AttributeDump extends Auth\ProcessingFilter
             } elseif ($name === 'logLevel') {
                 if (!is_string($values) || !method_exists(Logger::class, $values)) {
                     throw new Exception(
-                        'The "logLevel" configuration option must be a string (eg. "debug", "info", "notice", etc).'
+                        'The "logLevel" configuration option must be a string (eg. "debug", "info", "notice", etc).',
                     );
                 }
                 $this->logLevel = $values;

@@ -13,12 +13,12 @@ Parameters
     It must be `core:AttributeDump`.
 
 `attributes`
-:   An array of attribute names that are to be output to the SimpleSAMLphp logs. 
+:   An array of attribute names that are to be output to the SimpleSAMLphp logs.
     If not specified, and `attributesRegex` is not specified, all attributes will be output.
 
 `attributesRegex`
 :   An array of regular expressions. Any attribute name that matches any of the regular expressions
-    in this list are to be output to the SimpleSAMLphp logs. 
+    in this list are to be output to the SimpleSAMLphp logs.
     If not specified, and `attributes` is also not specified, all attributes will be output.
 
 `prefix`
@@ -29,7 +29,6 @@ Parameters
 :   The level to log at. For the message to appear in the SimpleSAMLphp log files it needs to be at a level
     equal to or higher than the log value you've configured in your `config.php`.
     Valid values are: "emergency", "critical", "alert", "error", "warning", "notice", "info" or "debug".
-
 
 Examples
 --------
